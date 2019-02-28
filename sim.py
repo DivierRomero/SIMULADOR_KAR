@@ -1,9 +1,17 @@
 import numpy as np
 import matplotlib as plt
-masa=147 #Masa del kart [kg]
-c_f=0.825 # coeficiente de fricción
-A_front=0.575 #[m/s^2]
-CG_L=1.074 #Centro de gravedad Longitudinal[m]
-CG_V=0.5 #Centro de gravedad  Vertical [m]
-gravedad=9.78 #Gravedad [m/s^2]
-rho_a=0.95#Densidad del aire
+dientes=np.linspace(2.0, 3.0, num=5)
+ng=(dientes/20)
+
+# Definición parámetros, interfaz y adquisición de la información
+m=147 #Masa total (kg)
+mu=0.85 #Coeficiente de fricción de las llantas
+cgx=66 #Porcentaje en eje longitudinal del CG (%)
+b=cgx;
+cgy=50;%Porcentaje en eje lateral del CG (%)
+g=9.78;%Aceleración de la gravedad (m/s^2)
+L=1.03;%Longitud total de kart (m)
+vmaxtot=vmaxima(ss)/3.6;%Velocidad máxima alcanzable (m/s)
+W=m*g; %Peso del kart (N)
+h=0.5; %Altura del CG de Kart (m)
+rho=0.95; %Densidad del aire en Bogotá (kg/m^3)
